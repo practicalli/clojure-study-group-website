@@ -61,7 +61,7 @@
 
 
 (defn study-group-website []
-  [:div
+  [:div {:class "jumbotron"}
    [:h1 (get-in @app-state [:website :title])]
    [:h3 (get-in @app-state [:website :description])]])
 
