@@ -39,6 +39,17 @@
 ;; by placing them in [] rather than as function calls (e.g. in the reagent/render-component)
 ;; and any component that render-component manages.
 
+;; Components could include:
+;; * study-group-website - the main component
+;; * broadcast-recording
+;; * scheduled-broadcast
+;; * broadcast-description
+;; * thumbnail of study session
+;; * an ordered list of study sessions
+;; * full display of a study session
+
+
+
 (defn hello-world []
   [:div
    [:h1 (:text @app-state)]
