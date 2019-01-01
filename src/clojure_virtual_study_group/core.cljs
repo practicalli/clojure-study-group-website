@@ -28,7 +28,17 @@
 ;; State will be used to control what data should be show, and presentation managed by CSS
 
 ;; define your app data so that it doesn't get over-written on reload
-(defonce app-state (atom {:text "Hello world!"}))
+(defonce
+  app-state
+  (atom
+   {:website
+    {:title       "Clojure Virtual Study Group"
+     :description "Learn to think Functionally with Clojure in a series of YouTube broadcasts"
+     :copyright   "2019 Practicalli"}
+    :broadcasts
+    {:1 {:url "https://www.youtube.com/watch?v=MZcuL4lRw5E"
+         :title "Overview of Clojure"
+         :description "Discussing the uses of Clojure and a tour of its syntax"}}}))
 
 
 
@@ -50,17 +60,17 @@
 
 
 
-(defn hello-world []
+(defn study-group-website []
   [:div
-   [:h1 (:text @app-state)]
-   [:h3 "Edit this and watch it change!"]])
+   [:h1 (get-in @app-state [:website :title])]
+   [:h3 (get-in @app-state [:website :description])]])
 
 
 
 ;; Reagent specific code
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(reagent/render-component [hello-world]
+(reagent/render-component [study-group-website]
                           (. js/document (getElementById "app")))
 
 (defn on-js-reload []
