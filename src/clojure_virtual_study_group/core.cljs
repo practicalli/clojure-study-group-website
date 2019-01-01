@@ -36,7 +36,7 @@
      :description "Learn to think Functionally with Clojure in a series of YouTube broadcasts"
      :copyright   "2019 Practicalli"}
     :broadcasts
-    {:1 {:url "https://www.youtube.com/watch?v=MZcuL4lRw5E"
+    {:CSG-001 {:url "https://www.youtube.com/watch?v=MZcuL4lRw5E"
          :title "Overview of Clojure"
          :description "Discussing the uses of Clojure and a tour of its syntax"}}}))
 
