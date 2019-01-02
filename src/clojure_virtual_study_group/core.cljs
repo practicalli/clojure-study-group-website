@@ -60,6 +60,21 @@
 
 
 
+(defn broadcast-card []
+  [:div {:class "card"
+         :width "18rem"}
+   [:img {:src "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Clojure_logo.svg/200px-Clojure_logo.svg.png"}]
+   [:div {:class "card-body"}
+    [:h5 {:class "card-title"}
+     (get-in @app-state [:broadcasts :CSG-001 :title])]
+    [:p {:class "card-text"}
+     (get-in @app-state [:broadcasts :CSG-001 :description])]
+    [:a {:href "https://www.youtube.com/watch?v=MZcuL4lRw5E"
+         :class "btn btn-primary"}
+     "Play Broadcast"]]])
+
+
+
 (defn website-title []
   [:div {:class "jumbotron practicalli-jumbotron"}
    [:h1 (get-in @app-state [:website :title])]
@@ -69,6 +84,27 @@
   [:div {:class "container"}
    [website-title]
 
+   ;; Broadcasts
+   [:div {:class "row"}
+
+    [:div {:class "col-md-3"}
+     [broadcast-card]]
+    [:div {:class "col-md-3"}
+     [broadcast-card]]
+    [:div {:class "col-md-3"}
+     [broadcast-card]]
+    [:div {:class "col-md-3"}
+     [broadcast-card]]
+    [:div {:class "col-md-3"}
+     [broadcast-card]]
+    [:div {:class "col-md-3"}
+     [broadcast-card]]
+    [:div {:class "col-md-3"}
+     [broadcast-card]]
+    [:div {:class "col-md-3"}
+     [broadcast-card]]
+    ]
+   ])
 
 
 
