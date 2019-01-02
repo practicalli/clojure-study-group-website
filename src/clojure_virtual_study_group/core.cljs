@@ -60,10 +60,15 @@
 
 
 
-(defn study-group-website []
-  [:div {:class "jumbotron"}
+(defn website-title []
+  [:div {:class "jumbotron practicalli-jumbotron"}
    [:h1 (get-in @app-state [:website :title])]
-   [:h3 (get-in @app-state [:website :description])]])
+   [:h4 (get-in @app-state [:website :description])]])
+
+(defn study-group-website []
+  [:div {:class "container"}
+   [website-title]
+
 
 
 

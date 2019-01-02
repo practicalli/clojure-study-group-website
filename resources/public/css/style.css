@@ -1,2 +1,9 @@
 /* some style */
 
+/* Customise Bootstrap jumbotron */
+
+.practicalli-jumbotron {
+    background-color: #63b132;
+    color: white;
+    font-family: Ubuntu, sans-serif;
+}
