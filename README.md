@@ -1,12 +1,25 @@
 # clojure-virtual-study-group
 
+## Build Status
+
+[![CircleCI](https://circleci.com/gh/practicalli/clojure-study-group-website.svg?style=svg)](https://circleci.com/gh/practicalli/clojure-study-group-website)
+
+```
+ _____ _       _                  _____ _             _         _____
+/  __ \ |     (_)                /  ___| |           | |       |  __ \
+| /  \/ | ___  _ _   _ _ __ ___  \ `--.| |_ _   _  __| |_   _  | |  \/_ __ ___  _   _ _ __
+| |   | |/ _ \| | | | | '__/ _ \  `--. \ __| | | |/ _` | | | | | | __| '__/ _ \| | | | '_ \
+| \__/\ | (_) | | |_| | | |  __/ /\__/ / |_| |_| | (_| | |_| | | |_\ \ | | (_) | |_| | |_) |
+ \____/_|\___/| |\__,_|_|  \___| \____/ \__|\__,_|\__,_|\__, |  \____/_|  \___/ \__,_| .__/
+             _/ |                                        __/ |                       | |
+            |__/                                        |___/                        |_|
+```
+
+## Overview
 A website langing pages for the Practicalli Clojure virtual Study Group.
 
 The website is created in ClojureScript with Bootstrap CSS library for styles.
 
-## Overview
-
-FIXME: Write a paragraph about the library/project and highlight its goals.
 
 ## Setup
 
