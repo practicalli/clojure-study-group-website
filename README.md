@@ -1,6 +1,8 @@
 # clojure-virtual-study-group
 
-FIXME: Write a one-line description of your library/project.
+A website langing pages for the Practicalli Clojure virtual Study Group.
+
+The website is created in ClojureScript with Bootstrap CSS library for styles.
 
 ## Overview
 
@@ -8,14 +10,13 @@ FIXME: Write a paragraph about the library/project and highlight its goals.
 
 ## Setup
 
-To get an interactive development environment run:
+Start an interactive development environment (REPL driven by Figwheel), either use your favourite editor or on the command line, run:
 
     lein figwheel
 
-and open your browser at [localhost:3449](http://localhost:3449/).
-This will auto compile and send all changes to the browser without the
-need to reload. After the compilation process is complete, you will
-get a Browser Connected REPL. An easy way to try it is:
+and open your browser at [localhost:3449](http://localhost:3449/) (this should open automatically though).
+
+Each time you save changes or evaluate code it is auto compiled and all changes are sent to the browser without the need to reload. After the compilation process is complete, you will get a Browser Connected REPL. An easy way to try it is:
 
     (js/alert "Am I connected?")
 
@@ -25,15 +26,26 @@ To clean all compiled files:
 
     lein clean
 
+## Production build
+
 To create a production build run:
 
     lein do clean, cljsbuild once min
 
 And open your browser in `resources/public/index.html`. You will not
-get live reloading, nor a REPL. 
+get live reloading, nor a REPL.
+
+## Deployment
+
+Current deployment is manually copying the following files to the `clojure-study-group` project:
+
+* `resources/public/index.html`
+* `resources/public/css/`
+* `resources/public/js`
+
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2019 Practicalli
 
-Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
+Distributed under the Creative Commons Attribution Share-Alike 4.0 International.
