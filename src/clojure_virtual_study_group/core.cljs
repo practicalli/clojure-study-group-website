@@ -119,3 +119,37 @@
   ;; your application
   ;; (swap! app-state update-in [:__figwheel_counter] inc)
 )
+
+;; REPL design journal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Testing update of app-state
+#_(swap! app-state assoc-in [:website :title] "Test Title Update")
+
+;; Reset app-state to known start state
+#_(reset!
+ app-state
+ {:website
+  {:title       "Clojure Virtual Study Group"
+   :description "Learn to think Functionally with Clojure in a series of YouTube broadcasts"
+   :copyright   "2019 Practicalli"}
+  :broadcasts
+  {:1 {:url "https://www.youtube.com/watch?v=MZcuL4lRw5E"
+       :title "Overview of Clojure"
+       :description "Discussing the uses of Clojure and a tour of its syntax"}}})
+
+#_@app-state
+
+
+#_(get-in @app-state [:broadcasts :CSG-001 :description])
+
+#_(reset!
+ app-state
+ {:website
+  {:title       "Clojure Virtual Study Group"
+   :description "Learn to think Functionally with Clojure in a series of YouTube broadcasts"
+   :copyright   "2019 Practicalli"}
+  :broadcasts
+  {:CSG-001 {:url "https://www.youtube.com/watch?v=MZcuL4lRw5E"
+             :title "Overview of Clojure"
+             :description "Discussing the uses of Clojure and a tour of its syntax"}}})
