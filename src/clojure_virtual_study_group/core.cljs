@@ -61,7 +61,7 @@
 
 
 (defn broadcast-card []
-  [:div {:class "card"
+  [:div {:class "card mb-4 shadow-sm"
          :width "18rem"}
    [:img {:src "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Clojure_logo.svg/200px-Clojure_logo.svg.png"}]
    [:div {:class "card-body"}
