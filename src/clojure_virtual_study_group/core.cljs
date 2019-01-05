@@ -10,7 +10,8 @@
 
 
 (ns clojure-virtual-study-group.core
-    (:require [reagent.core :as reagent :refer [atom]]))
+  (:require [reagent.core :as reagent]
+            [clojure-virtual-study-group.data-model :as data-model :refer [app-state]]))
 
 
 ;; Debugging in the Browser / JavaScript console
@@ -28,7 +29,7 @@
 ;; State will be used to control what data should be show, and presentation managed by CSS
 
 ;; define your app data so that it doesn't get over-written on reload
-(defonce
+#_(defonce
   app-state
   (atom
    {:website
