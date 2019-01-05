@@ -59,6 +59,19 @@
 ;; * full display of a study session
 
 
+(defn broadcast-next-card []
+  [:div {:class "card"
+         :width "18rem"}
+   [:h5 {:class "card-title"}
+    (get-in @app-state [:broadcasts :CSG-001 :title])]
+   [:div {:class "card-body"}
+    [:h5 {:class "card-title"}
+     (get-in @app-state [:broadcasts :CSG-001 :title])]
+    [:p {:class "card-text"}
+     (get-in @app-state [:broadcasts :CSG-001 :description])]
+    [:a {:href "https://www.youtube.com/watch?v=MZcuL4lRw5E"
+         :class "btn btn-primary"}
+     "Play Broadcast"]]])
 
 (defn broadcast-card []
   [:div {:class "card mb-4 shadow-sm"
